@@ -29,6 +29,5 @@ rb   = 0.5*l/c/Vm;
 Rc   = -0.25*(c*Vm+1)/(c*(nx*dvx+nz*dvz))+sqrt(ra+rb);
 xnew = mid.x + nx * Rc;
 znew = mid.z + nz * Rc;
-v=1;
 p2.x = xnew;
 p2.z = znew ;
