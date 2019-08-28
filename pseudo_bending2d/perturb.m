@@ -19,7 +19,10 @@ end
 
 nx          = nx /nl;
 nz          = nz /nl;
-
+if(nx==0 && nz==0)
+    p2=mid;
+    return;
+end
   
 l    = (p3.x-mid.x)^2+(p3.z-mid.z)^2;
 c    = 2./(getV(p1)+getV(p3)); %(0.5/getV(p1)+0.5/getV(p3) ;
