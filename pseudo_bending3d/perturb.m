@@ -14,14 +14,14 @@ nL   = dx*dvx+dy*dvy+dz*dvz;
 nx   = dvx - nL*dx/L2;
 ny   = dvy - nL*dy/L2;
 nz   = dvz - nL*dz/L2; 
+f(nx==0 && ny==0 && nz==0)
+    p2=mid;
+    return;
+end
 nl   = sqrt(nx^2+ny^2+nz^2);
 nx = nx /nl;
 ny = ny/nl;
 nz = nz /nl;
-if(nx==0 && ny==0 && nz==0)
-    p2=mid;
-    return;
-end
 l    = (p3.x-mid.x)^2+(p3.y-mid.y)^2+(p3.z-mid.z)^2;
 c    = 2./(getV(p1)+getV(p3)); %(0.5/getV(p1)+0.5/getV(p3) ;
 
