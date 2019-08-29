@@ -10,20 +10,13 @@ L    = sqrt(L2);
 nL   = dx*dvx+dz*dvz;
 nx   = dvx - nL*dx/L2;
 nz   = dvz - nL*dz/L2;
-nl   = sqrt(nx^2+nz^2);
-
-if(nl==0)
-    nl=1;
-end
-
-
-nx          = nx /nl;
-nz          = nz /nl;
 if(nx==0 && nz==0)
     p2=mid;
     return;
 end
-  
+nl   = sqrt(nx^2+nz^2);
+nx          = nx /nl;
+nz          = nz /nl;
 l    = (p3.x-mid.x)^2+(p3.z-mid.z)^2;
 c    = 2./(getV(p1)+getV(p3)); %(0.5/getV(p1)+0.5/getV(p3) ;
 Vm   = getV(mid) ;
